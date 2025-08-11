@@ -1,0 +1,512 @@
+ @media only screen and (min-width: 600px) {
+      .col-s-1 { width: 8.33%; }
+      .col-s-2 { width: 16.66%; }
+      .col-s-3 { width: 25%; }
+      .col-s-4 { width: 33.33%; }
+      .col-s-5 { width: 41.66%; }
+      .col-s-6 { width: 50%; }
+      .col-s-7 { width: 58.33%; }
+      .col-s-8 { width: 66.66%; }
+      .col-s-9 { width: 75%; }
+      .col-s-10 { width: 83.33%; }
+      .col-s-11 { width: 91.66%; }
+      .col-s-12 { width: 100%; }
+    }
+
+    @media only screen and (min-width: 768px) {
+      .col-1 { width: 8.33%; }
+      .col-2 { width: 16.66%; }
+      .col-3 { width: 25%; }
+      .col-4 { width: 33.33%; }
+      .col-5 { width: 41.66%; }
+      .col-6 { width: 50%; }
+      .col-7 { width: 58.33%; }
+      .col-8 { width: 66.66%; }
+      .col-9 { width: 75%; }
+      .col-10 { width: 83.33%; }
+      .col-11 { width: 91.66%; }
+      .col-12 { width: 100%; }
+    }
+
+
+ 
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+    }
+
+    #google_translate_element {
+  margin: 10px 0;
+  text-align: right; 
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+body > .skiptranslate {
+  display: none !important;
+}
+
+.goog-te-combo {
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.goog-te-gadget-simple {
+  font-size: 14px;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+}
+a{
+  text-decoration: none;
+  color: white;
+
+}
+
+    .navbar-brand{
+      width: 50px;
+      height: 50px;
+    }
+
+   .iconandsign{
+    margin-left: 60px;
+   }
+
+   .iconandsign .nav-link-icon{
+    color: #FFFFFF8C;
+    text-decoration: none;
+    padding: 10px;
+    transition: .3s;
+   }
+
+   .nav-link-icon:hover {
+    color: white;
+   }
+
+   .nav-link{
+    transition: .3s;
+   }
+
+   .nav-link:hover {
+    color: white;
+   }
+
+    /* hero */
+
+    .hero-slider {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .slides-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .hero-slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 10px 10px 10px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background-color: #f5f5f5;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .hero-slide.active {
+      display: flex;
+      z-index: 2;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+      padding-left: 50px;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 280px;
+      padding-right: 60px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 3;
+    }
+
+    .arrow.left {
+      left: 20px;
+    }
+
+    .arrow.right {
+      right: 20px;
+    }
+
+ 
+
+        /* Promo Box Section */
+  discount-section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  margin: 50px 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.discount-section h2 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 35px;
+  color: #222;
+}
+
+.promo-box {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.promo-text {
+  flex: 1 1 35%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #111;
+  gap: 8px;
+}
+
+.promo-text .title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+}
+
+.promo-text .discount {
+  font-size: 72px;
+  font-weight: 900;
+  color: #e63946; /* bright red for discount */
+  margin: 0;
+  line-height: 1;
+}
+
+.promo-text .sub {
+  font-size: 18px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.shop-now-link {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: black;       
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  border-style: none;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  
+}
+
+.shop-now-link:hover {
+  background-color: gray;      
+  color: black;
+  text-decoration: none;
+}
+
+.promo-image {
+  flex: 1 1 60%;
+  min-width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-image img {
+  width: 100%;
+  max-width: 480px; 
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+    .section-p1{
+      padding: 40px 80px;
+    }
+
+    .product1{
+      text-align: center;
+      background:  #f0f0f0;      
+    }
+
+    .product1 .pro-container{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      flex-wrap: wrap;
+    }
+
+.product1 h2{
+  font-weight: bolder;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.pro {
+  width: 30%;
+  min-width: 250px;
+  background: white;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #b3b2b2;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  transition: 0.2s ease;
+}
+
+.pro:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Product Image */
+.pro img {
+  width: 100%;
+  height: 230px;
+  border-radius: 20px;
+  border: 2px solid  #e6e6e6;
+ object-fit: contain;
+  border-radius: 6px;
+  
+}
+
+
+.pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+
+/* Product Info */
+.des h5 {
+  padding-top: 7px;
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.des .star {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.des h4 {
+  font-weight: bold;
+  color: #000;
+}
+
+
+.promo-banners {
+  padding: 40px 80px;
+}
+
+.banner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Left and Right columns */
+.banner {
+    position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner.large {
+  flex: 2;
+  height: 260px;
+}
+
+.banner-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.banner.small {
+  height: 120px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.banner-content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+}
+
+.banner-content h5 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+
+.shop-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background-color: gray;
+  color: black;
+}
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 50px auto;
+  padding-bottom: 45%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+
+
+
+@media (max-width: 768px) {
+      .hero-slide {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .hero-image img {
+        height: 200px;
+      }
+
+      .arrow {
+        font-size: 20px;
+        padding: 8px;
+      }
+
+       .banner.large,
+       .banner.small {
+        height: 180px;
+      }
+
+     .promo-banners {
+        padding: 20px;
+      }
+      
+    }

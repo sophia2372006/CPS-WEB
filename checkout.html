@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="checkout.css">
+  
+  
+  </head>
+  <body>
+<div id="google_translate_element"></div>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">CampNet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+            <a class="nav-link" href="product.html"><i class="bi bi-grid-fill"></i> Products</a>
+            <a class="nav-link " href="review.html"><i class="bi bi-star-fill"></i> Reviews</a>
+            <a class="nav-link " href="about.html"><i class="bi bi-info-circle-fill"></i> About Us</a>
+            <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill"></i> Contact</a>
+          </div>
+
+          <div class="iconandsign">
+            <a href="addtocart.html" class="nav-link-icon "><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="signing.html" class="nav-link-icon ">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <a href="addtocart.html" class="back-arrow">
+    <i class="fa-solid fa-arrow-left"></i>
+  </a>
+
+<div class="ck-page-wrapper">
+  <h1 class="ck-title">Checkout</h1>
+  <form id="ck-form" class="ck-form-layout">
+
+    <!-- Billing Info -->
+    <div class="ck-billing">
+      <div class="ck-field">
+        <label for="ck-fullname">Full Name</label>
+        <input type="text" id="ck-fullname" placeholder="John Doe" required>
+      </div>
+      <div class="ck-field">
+        <label for="ck-email">Email Address</label>
+        <input type="email" id="ck-email" placeholder="john@example.com" required>
+      </div>
+      <div class="ck-field">
+        <label for="ck-address">Address</label>
+        <input type="text" id="ck-address" placeholder="123 Street Name" required>
+      </div>
+      <div class="ck-field">
+        <label for="ck-city">City</label>
+        <input type="text" id="ck-city" placeholder="New York" required>
+      </div>
+      <div class="ck-field">
+        <label for="ck-payment">Payment Method</label>
+        <select id="ck-payment">
+          <option value="card">Credit/Debit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+      </div>
+      <div class="ck-field">
+        <label for="ck-card">Card Number</label>
+        <input type="text" id="ck-card" placeholder="1234 5678 9012 3456" required>
+      </div>
+    </div>
+
+    <!-- Summary Info -->
+   <div class="ck-summary" id="ck-summary-container">
+  <h2>Order Summary</h2>
+
+ <div class="ck-summary-item">
+  <img src="./img/pic3.jpg" alt="Item 1" class="ck-summary-img">
+  <div class="ck-summary-details">
+    <span>Item 1</span>
+    <span>$50</span>
+  </div>
+</div>
+
+ <div class="ck-summary-item">
+  <img src="./img/pic3.jpg" alt="Item 1" class="ck-summary-img">
+  <div class="ck-summary-details">
+    <span>Item 1</span>
+    <span>$50</span>
+  </div>
+</div>
+
+  <div class="ck-summary-item">
+    <span>Shipping</span>
+    <span>$10</span>
+  </div>
+
+  <div class="ck-summary-item ck-total">
+    <span>Total</span>
+    <span>$130</span>
+  </div>
+
+  <button type="submit" class="ck-btn">Place Order</button>
+</div>
+  </form>
+</div>
+
+<!-- Checkout Modal -->
+<div id="ck-modal" class="ck-modal">
+  <div class="ck-modal-content">
+    <span class="ck-close" id="ck-close">&times;</span>
+    <h2>✅ Order Placed!</h2>
+    <p>Thank you for shopping with us.</p>
+  </div>
+</div>
+
+<!-- footer -->
+<footer class="bg-dark text-light pt-5 pb-4 mt-5">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      <!-- About Us -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">About Us</h5>
+        <p>We provide the best online shopping experience with quality products, fast delivery, and customer support you can rely on.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="index.html" class="text-light text-decoration-none">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="product.html" class="text-light text-decoration-none">
+             <i class="fa-solid fa-bag-shopping"></i>
+              Shop
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="contact.html" class="text-light text-decoration-none">
+              <i class="fa-solid fa-envelope"></i>
+              Contact
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="privacy.html" class="text-light text-decoration-none">
+             <i class="fa-solid fa-shield-halved"></i>
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Follow Us</h5>
+        <a href="#" class="text-light me-3" title="Facebook">
+         <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" class="text-light me-3" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="text-light me-3" title="Twitter X">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="bg-light">
+
+    <!-- Bottom Bar -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-2">
+      <p class="mb-2 mb-md-0">&copy; 2025 Online Shop. All rights reserved.</p>
+      <div>
+        <a href="privacy.html" class="text-light text-decoration-none me-3">Privacy Policy</a>
+        <a href="#" class="text-light text-decoration-none">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+
+<script>
+   
+
+ 
+    const ckForm = document.getElementById("ck-form");
+      const ckModal = document.getElementById("ck-modal");
+      const ckClose = document.getElementById("ck-close");
+
+      ckForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        ckModal.style.display = "block";
+        ckForm.reset();
+        localStorage.removeItem("cart");
+      });
+
+      ckClose.addEventListener("click", function () {
+        ckModal.style.display = "none";
+      });
+
+      window.addEventListener("click", function (e) {
+        if (e.target == ckModal) {
+          ckModal.style.display = "none";
+        }
+      });
+
+     
+      function loadCheckoutSummary() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const container = document.getElementById("ck-summary-container");
+        let subtotal = 0;
+
+        if (!container) return;
+
+        const itemsHtml = cart
+          .map((item) => {
+            const itemTotal = item.price * item.quantity;
+            subtotal += itemTotal;
+            return `
+              <div class="ck-summary-item">
+                <img src="${item.image}" alt="${item.name}" class="ck-summary-img" />
+                <div class="ck-summary-details">
+                  <span>${item.name} x ${item.quantity}</span>
+                  <span>$${itemTotal.toFixed(2)}</span>
+                </div>
+              </div>
+            `;
+          })
+          .join("");
+
+        const shipping = 10;
+        const total = subtotal + shipping;
+
+        container.innerHTML = `
+          <h2>Order Summary</h2>
+          ${itemsHtml}
+          <div class="ck-summary-item">
+            <span>Shipping</span>
+            <span>$${shipping.toFixed(2)}</span>
+          </div>
+          <div class="ck-summary-item ck-total">
+            <span>Total</span>
+            <span>$${total.toFixed(2)}</span>
+          </div>
+          <button type="submit" class="ck-btn">Place Order</button>
+        `;
+      }
+
+      window.onload = loadCheckoutSummary;
+</script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script>
+<script  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+
+</html>

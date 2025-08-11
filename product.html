@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+  </head>
+  <body>
+    <div id="google_translate_element"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">CampNet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+            <a class="nav-link active" href="#"><i class="bi bi-grid-fill"></i> Products</a>
+            <a class="nav-link" href="review.html"><i class="bi bi-star-fill"></i> Reviews</a>
+            <a class="nav-link" href="about.html"><i class="bi bi-info-circle-fill"></i> About Us</a>
+            <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill"></i> Contact</a>
+          </div>
+          <div class="iconandsign">
+            <a href="addtocart.html" class="nav-link-icon position-relative">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+            </a>
+            <a href="signing.html" class="nav-link-icon">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search -->
+    <div class="search-wrapper">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search here..." oninput="toggleClearBtn()">
+        <i class="fa-solid fa-xmark clear-icon" onclick="clearSearch()" id="clearIcon" style="display:none;"></i>
+        <button onclick="searchAlert()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="category-buttons text-center my-4">
+      <button class="btn  mx-1 category-btn">All</button>
+      <button class="category-btn btn mx-1">Tents & Shelters</button>
+      <button class="category-btn btn mx-1">Outdoor Furniures</button>
+      <button class="category-btn btn mx-1">Cooking & Food Storage</button>
+      <button class="category-btn btn mx-1">Survival Tools</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="main-wrapper product-page">
+      <div class="product1">
+       <div class="pro-container d-flex flex-wrap justify-content-center gap-4">
+
+  <!-- Tent -->
+  <div class="pro" data-category="Tents & Shelters">
+    <img src="./img/pic3.jpg" alt="4-Person Waterproof Camping Tent">
+    <div class="des">
+      <h5>4-Person Camping Tent</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$89</h4>
+      <button onclick="addToCart('4-Person Camping Tent', 89, './img/pic3.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Tents & Shelters">
+    <img src="./img/temp1.jpg" alt="2 person Nature Hike Tent">
+    <div class="des">
+      <h5>2 person Nature Hike Tent</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$86</h4>
+      <button onclick="addToCart('2 person Nature Hike Tent', 89, './img/temp1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Tents & Shelters">
+    <img src="./img/tent2.jpg" alt="House Tent">
+    <div class="des">
+      <h5>House Tent</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$89</h4>
+      <button onclick="addToCart('House Tent', 89, './img/tent2.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Tents & Shelters">
+    <img src="./img/tent3.jpg" alt="Durable Inflatable Caming Tent">
+    <div class="des">
+      <h5>Durable Inflatable Caming Tent</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$109</h4>
+      <button onclick="addToCart('Durable Inflatable Caming Tent', 89, 'tent1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Tents & Shelters">
+    <img src="./img/tent4.jpg" alt="4 person Clear window Tent">
+    <div class="des">
+      <h5>4 person Clear window Tent</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$89</h4>
+      <button onclick="addToCart('4 person Clear window Tent', 89, './img/tent4.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Tents & Shelters">
+    <img src="./img/tent5.jpg" alt="2-Person-Camping-Tent-with-Double-layer-Door">
+    <div class="des">
+      <h5>2-Person-Camping-Tent-with-Double-layer-Door</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$89</h4>
+      <button onclick="addToCart('2-Person-Camping-Tent-with-Double-layer-Door', 89, './img/tent5.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Outdoor Furniures -->
+  <div class="pro" data-category="Outdoor Furniures">
+    <img src="./img/outdoor1.jpg" alt="Portable Table">
+    <div class="des">
+      <h5>Portable Table</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$72</h4>
+      <button onclick="addToCart('Portable Table', 72, 'sleepingbag1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Outdoor Furniures">
+    <img src="./img/outdoor2.jpg" alt="Portable Chair">
+    <div class="des">
+      <h5>Portable Chair</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$50</h4>
+      <button onclick="addToCart('Portable Chair', 72, './img/outdoor2.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Outdoor Furniures">
+    <img src="./img/outdoor3.jpg" alt="Hammock">
+    <div class="des">
+      <h5>Hammock</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$72</h4>
+      <button onclick="addToCart('Hammock', 72, './img/outdoor3.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Outdoor Furniures">
+    <img src="./img/outdoor4.jpg" alt="Dubble Hammock with Ajustable Stand">
+    <div class="des">
+      <h5>Dubble Hammock with Ajustable Stand</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$72</h4>
+      <button onclick="addToCart('Dubble Hammock with Ajustable Stand', 72, 'sleepingbag1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+ 
+ <div class="pro" data-category="Outdoor Furniures">
+    <img src="./img/outdoor5.jpg" alt="Portable Pacanic Table">
+    <div class="des">
+      <h5>Portable Pacanic Table</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$72</h4>
+      <button onclick="addToCart('Portable Pacanic Table', 72, './img/outdoor5.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Outdoor Furniures">
+    <img src="./img/outdoor6.jpg" alt="Portable Kitchen Table">
+    <div class="des">
+      <h5>Portable Kitchen Table</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$50</h4>
+      <button onclick="addToCart('Portable Kitchen Table', 72, './img/outdoor6.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <!-- Camp Stove -->
+  <div class="pro" data-category="Cooking & Food Storage">
+    <img src="./img/food.jpg" alt="Kitchen Organizar Table">
+    <div class="des">
+      <h5>Kitchen Organizar Table</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$59</h4>
+      <button onclick="addToCart('Kitchen Organizar Table', 59, './img/food.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Cooking & Food Storage">
+    <img src="./img/food2.jpg" alt="Camp Kitchen Cooking Utensil Set">
+    <div class="des">
+      <h5>Camp Kitchen Cooking Utensil Set</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$59</h4>
+      <button onclick="addToCart('Camp Kitchen Cooking Utensil Set', 59, './img/food2.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Cooking & Food Storage">
+    <img src="./img/food3.jpg" alt="Cookware Kit Outdoor Aluminum Cooking Set">
+    <div class="des">
+      <h5>Cookware Kit Outdoor Aluminum Cooking Set</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$59</h4>
+      <button onclick="addToCart('Cookware Kit Outdoor Aluminum Cooking Set', 59, './img/food3.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Cooking & Food Storage">
+    <img src="./img/food4.jpg" alt="Travel Coffeee Tote">
+    <div class="des">
+      <h5>Travel Coffeee Tote</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$59</h4>
+      <button onclick="addToCart('Travel Coffeee Tote', 59, './img/food4.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Cooking & Food Storage">
+    <img src="./img/food6.jpg" alt="Lunch Box">
+    <div class="des">
+      <h5>Lunch Box</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$59</h4>
+      <button onclick="addToCart('Lunch Box', 59, './img/food6.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Cooking & Food Storage">
+    <img src="./img/food5.jpg" alt="Backpack">
+    <div class="des">
+      <h5>Backpack</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$59</h4>
+      <button onclick="addToCart('Backpack', 59, './img/food5.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Survival Kit -->
+  <div class="pro" data-category="Survival Tools">
+    <img src="./img/ser6.jpg" alt="Survival Kit">
+    <div class="des">
+      <h5>Survival Kit</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$39</h4>
+      <button onclick="addToCart('Survival Kit', 39, './img/ser6.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Survival Tools">
+    <img src="./img/ser5.jpg" alt="Emergency Survival Gear Kit">
+    <div class="des">
+      <h5>Survival Gear Kit</h5>
+      <div class="star">
+      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$39</h4>
+      <button onclick="addToCart('Survival Gear Kit', 39, './img/ser5.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Survival Tools">
+    <img src="./img/ser1.jpg" alt="Emergacy Shelter">
+    <div class="des">
+      <h5>Emergacy Shelter</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$39</h4>
+      <button onclick="addToCart('Emergacy Shelter', 39, './img/ser1.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Survival Tools">
+    <img src="./img/ser4.jpg" alt="Water bag">
+    <div class="des">
+      <h5>Water bag</h5>
+      <div class="star">
+       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$39</h4>
+      <button onclick="addToCart('Water bag', 39, './img/ser4.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Survival Tools">
+    <img src="./img/ser5.jpg" alt="Survival Gear Kit2">
+    <div class="des">
+      <h5>Survival Gear Kit2</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$39</h4>
+      <button onclick="addToCart('Survival Gear Kit2', 39, './img/ser5.jpg')">Add to Cart</button>
+    </div>
+  </div>
+  <div class="pro" data-category="Survival Tools">
+    <img src="./img/ser6.jpg" alt="Survival Gear Kit3">
+    <div class="des">
+      <h5>Survival Gear Kit3</h5>
+      <div class="star">
+        <i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+      </div>
+      <h4>$39</h4>
+      <button onclick="addToCart('Survival Gear Kit3', 39, './img/ser6.jpg')">Add to Cart</button>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+  <!-- footer -->
+<footer class="bg-dark text-light pt-5 pb-4 mt-5">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      <!-- About Us -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">About Us</h5>
+        <p>We provide the best online shopping experience with quality products, fast delivery, and customer support you can rely on.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="#" class="text-light text-decoration-none">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="#" class="text-light text-decoration-none">
+             <i class="fa-solid fa-bag-shopping"></i>
+              Shop
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="#" class="text-light text-decoration-none">
+              <i class="fa-solid fa-envelope"></i>
+              Contact
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="privacy.html" class="text-light text-decoration-none">
+             <i class="fa-solid fa-shield-halved"></i>
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Follow Us</h5>
+        <a href="#" class="text-light me-3" title="Facebook">
+         <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" class="text-light me-3" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="text-light me-3" title="Twitter X">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="bg-light">
+
+    <!-- Bottom Bar -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-2">
+      <p class="mb-2 mb-md-0">&copy; 2025 Online Shop. All rights reserved.</p>
+      <div>
+        <a href="privacy.html" class="text-light text-decoration-none me-3">Privacy Policy</a>
+        <a href="#" class="text-light text-decoration-none">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+   
+<script>
+  function toggleClearBtn() {
+    const input = document.getElementById("searchInput");
+    const clearIcon = document.getElementById("clearIcon");
+    clearIcon.style.display = input.value.length > 0 ? "block" : "none";
+  }
+
+  function clearSearch() {
+    const input = document.getElementById("searchInput");
+    input.value = "";
+    document.getElementById("clearIcon").style.display = "none";
+  }
+
+  function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ name, price, image, quantity: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+  }
+
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = count;
+    cartCountElement.style.display = count > 0 ? 'inline-block' : 'none';
+  }
+
+  
+  document.querySelectorAll('.category-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.textContent.trim();
+      localStorage.setItem('selectedCategory', category); // save selected category
+      filterProductsByCategory(category);
+    });
+  });
+
+  function filterProductsByCategory(category) {
+    document.querySelectorAll('.pro').forEach(product => {
+      const productCategory = product.getAttribute('data-category');
+      product.style.display = (category === 'All' || productCategory === category) ? 'block' : 'none';
+    });
+
+    // Update button styles (optional highlight)
+    document.querySelectorAll('.category-btn').forEach(btn => {
+      btn.classList.remove('btn-primary');
+      btn.classList.add('btn-outline-secondary');
+      if (btn.textContent.trim() === category) {
+        btn.classList.add('btn-primary');
+        btn.classList.remove('btn-outline-secondary');
+      }
+    });
+  }
+
+  window.onload = function () {
+    updateCartCount();
+
+   
+    const savedCategory = localStorage.getItem('selectedCategory') || 'All';
+    filterProductsByCategory(savedCategory);
+
+    if (typeof loadCart === 'function') {
+      loadCart(); 
+    }
+  };
+</script>
+
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </body>
+</html>

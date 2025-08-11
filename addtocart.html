@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="addtocart.css">
+  
+  
+  </head>
+  <body>
+<div id="google_translate_element"></div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">CampNet</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+            <a class="nav-link" href="product.html"><i class="bi bi-grid-fill"></i> Products</a>
+            <a class="nav-link" href="review.html"><i class="bi bi-star-fill"></i> Reviews</a>
+            <a class="nav-link" href="about.html"><i class="bi bi-info-circle-fill"></i> About Us</a>
+            <a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill"></i> Contact</a>
+          </div>
+
+          <div class="iconandsign">
+            <a href="" class="nav-link-icon active text-white"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="signing.html" class="nav-link-icon ">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+  <div class="container">
+      <div class="cart">
+        <h2>Shopping Cart</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Products</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th></th> <!-- For Remove Button -->
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+        <div class="coupon">
+          <input type="text" id="couponInput" placeholder="Enter Coupon Code" />
+          <button disabled>Apply Coupon Code</button>
+         
+        </div>
+      </div>
+
+      <div class="summary">
+        <h2>Order Summary</h2>
+        <div class="totals">
+          <div>Subtotal: $<span id="subtotal">0.00</span></div>
+          <div>Discount: <span id="discount">0%</span></div>
+          <div>Shipping: <span>Free</span></div>
+          <div class="total">Total: $<span id="total">0.00</span></div>
+        </div>
+        <button onclick="goToCheckout()">Proceed to Checkout</button>
+      </div>
+    </div>
+  
+<!-- footer -->
+<footer class="bg-dark text-light pt-5 pb-4 mt-5">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      <!-- About Us -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">About Us</h5>
+        <p>We provide the best online shopping experience with quality products, fast delivery, and customer support you can rely on.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="index.html" class="text-light text-decoration-none">
+              <i class="fa-solid fa-house"></i>
+              Home
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="product.html" class="text-light text-decoration-none">
+             <i class="fa-solid fa-bag-shopping"></i>
+              Shop
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="contact.html" class="text-light text-decoration-none">
+              <i class="fa-solid fa-envelope"></i>
+              Contact
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="privacy.html" class="text-light text-decoration-none">
+             <i class="fa-solid fa-shield-halved"></i>
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Follow Us -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Follow Us</h5>
+        <a href="#" class="text-light me-3" title="Facebook">
+         <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" class="text-light me-3" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="text-light me-3" title="Twitter X">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="bg-light">
+
+    <!-- Bottom Bar -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-2">
+      <p class="mb-2 mb-md-0">&copy; 2025 Online Shop. All rights reserved.</p>
+      <div>
+        <a href="privacy.html" class="text-light text-decoration-none me-3">Privacy Policy</a>
+        <a href="#" class="text-light text-decoration-none">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+<script>
+
+      function loadCart() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartTable = document.getElementById("cart-items");
+    let subtotal = 0;
+
+    cartTable.innerHTML = "";
+
+    cartItems.forEach((item, index) => {
+      const itemTotal = item.price * item.quantity;
+      subtotal += itemTotal;
+
+      const row = `
+        <tr>
+          <td>
+            <img src="${item.image}" alt="${item.name}" style="width: 70px; height: auto; max-height: 80px; object-fit: contain;">
+            ${item.name}
+          </td>
+          <td>$${item.price.toFixed(2)}</td>
+          <td>
+  <div class="d-flex align-items-center gap-2">
+    <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity(${index}, -1)">−</button>
+    <span>${item.quantity}</span>
+    <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity(${index}, 1)">+</button>
+  </div>
+</td>
+          <td>$${itemTotal.toFixed(2)}</td>
+          <td>
+  <button onclick="removeItem(${index})" class="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center" style="width: 30px; height: 30px;">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</td>
+        </tr>
+      `;
+
+      cartTable.innerHTML += row;
+    });
+
+    document.getElementById("subtotal").textContent = subtotal.toFixed(2);
+    document.getElementById("total").textContent = subtotal.toFixed(2); // You can subtract discount here
+  }
+
+  function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+  }
+
+  function updateQuantity(index, change) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Update quantity
+  cart[index].quantity += change;
+
+  // Prevent negative or zero quantity
+  if (cart[index].quantity < 1) {
+    if (confirm("Remove this item from the cart?")) {
+      cart.splice(index, 1); // remove item
+    } else {
+      cart[index].quantity = 1; // reset to 1
+    }
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCart();
+  updateCartCount();
+}
+
+  // Load cart on page load
+  window.onload = loadCart;
+
+
+  // iconcount
+  function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const count = cart.reduce((total, item) => total + item.quantity, 0);
+  const cartCountElement = document.getElementById('cart-count');
+  if (cartCountElement) {
+    cartCountElement.textContent = count;
+    cartCountElement.style.display = count > 0 ? 'inline-block' : 'none';
+  }
+}
+
+ function goToCheckout() {
+  window.location.href = 'checkout.html';
+}
+
+window.onload = function () {
+  updateCartCount();
+  if (typeof loadCart === 'function') {
+    loadCart(); // only on cart page
+  }
+};
+</script> 
+
+<script >
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script>
+
+
+<script  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+
+ 
+</html>
