@@ -314,7 +314,7 @@
             <!-- Name -->
             <div class="mb-3">
               <label for="reviewerName" class="form-label">Name</label>
-              <input type="text" class="form-control" id="reviewerName" placeholder="Your Name" required>
+              <input type="text" class="form-control" id="reviewerName" required placeholder="Your Name" >
             </div>
             <!-- Rating -->
            <div class="mb-3">
@@ -331,7 +331,7 @@
             <!-- Review Text -->
             <div class="mb-3">
               <label for="reviewText" class="form-label">Review</label>
-              <textarea class="form-control" id="reviewText" rows="3" placeholder="Write your review here..."></textarea>
+              <textarea class="form-control" id="reviewText" rows="3" required placeholder="Write your review here..."></textarea>
             </div>
           </div>
           <div class="modal-footer">
@@ -500,10 +500,7 @@
         const rating = document.getElementById('reviewRating').value;
         const review = document.getElementById('reviewText').value.trim();
 
-        if (!name || !rating || !review) {
-          alert('Please fill all fields.');
-          return;
-        }
+
 
         const successModal = new bootstrap.Modal(document.getElementById('successModal'));
         successModal.show();
@@ -518,5 +515,6 @@
 </script>
 
 </body>
+
 
 </html>
